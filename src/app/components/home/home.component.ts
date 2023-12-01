@@ -15,6 +15,12 @@ export class HomeComponent implements OnInit {
 
   constructor(private todoSrv: TodoService ) {}
 
+  cerca(ciao: any):boolean {
+    return ciao.completed === true
+  }
+  cerca2(ciao: any):boolean {
+    return ciao.completed === false
+  }
   ngOnInit(): void {
     setTimeout(() =>{
       this.loaded = true
