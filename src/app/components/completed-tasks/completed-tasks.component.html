@@ -1,9 +1,14 @@
 <main>
   <ng-container *ngIf="!loaded; else templeteA">Loading...</ng-container>
   <ng-template #templeteA>
-    <ng-container *ngIf="!todos[0]">Ops, there are no completed tasks!</ng-container>
+    <ng-container *ngIf="!todos[0]"
+      >Ops, there are no completed tasks!</ng-container
+    >
     <div *ngFor="let task of todos; let i = index">
-      <div *ngIf="task.completed">-{{ task.title }}</div>
+      <div *ngIf="task.completed; else templeteB">-{{ task.title }}</div>
     </div>
+    <ng-template #templeteB>
+        Ops, there are no completed tasks!
+    </ng-template>
   </ng-template>
 </main>

@@ -27,6 +27,7 @@ export class HomeComponent implements OnInit {
       this.todoSrv.creaTasks(this.task, this.index);
       this.ngOnInit()
       this.index += 1
+      this.task = ''
     }, 2000);
   
   }

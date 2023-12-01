@@ -6,6 +6,11 @@
         <ng-container *ngIf="!todos[0]">
           <p>Ops, there are no activites!</p>
         </ng-container>
+        <ng-container *ngFor="let task of todos; let i = index">
+          <ng-container *ngIf="task.completed">
+            <p>Ops, there are no activites to do!</p>
+          </ng-container>
+        </ng-container>
       </div>
       <div class="aggiungi">
         <input type="text" [(ngModel)]="task" />
