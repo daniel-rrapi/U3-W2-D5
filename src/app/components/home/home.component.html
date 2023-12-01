@@ -21,7 +21,7 @@
       <div *ngFor="let task of todos; let i = index">
         <div *ngIf="!task.completed">
           <div class="todo">
-            <p>{{ task.title }}</p>
+            <p>-{{ task.title }}</p>
             <svg
             (click)="taskDone(task.id, i)"
               xmlns="http://www.w3.org/2000/svg"
