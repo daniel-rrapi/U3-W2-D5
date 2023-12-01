@@ -14,8 +14,10 @@ export class CompletedTasksComponent implements OnInit {
   constructor(private todoSrv: TodoService) { }
 
   ngOnInit(): void {
-    const todos = this.todoSrv.recuperaTasks()
-    this.todos = todos
+    setTimeout(() => {
+      const todos = this.todoSrv.recuperaTasks()
+      this.todos = todos
+    }, 2000);
   }
 
 }

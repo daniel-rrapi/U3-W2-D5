@@ -15,18 +15,24 @@ export class HomeComponent implements OnInit {
   constructor(private todoSrv: TodoService ) {}
 
   ngOnInit(): void {
-    const todos =  this.todoSrv.recuperaTasks();
-    this.todos = todos
+    setTimeout(() =>{
+      const todos =  this.todoSrv.recuperaTasks();
+      this.todos = todos
+    }, 2000)
   }
   addNewTask(task: string) {
-    this.todoSrv.creaTasks(this.task, this.index);
-    this.ngOnInit()
-    this.index += 1
+    setTimeout(() => {
+      this.todoSrv.creaTasks(this.task, this.index);
+      this.ngOnInit()
+      this.index += 1
+    }, 2000);
   
   }
   taskDone(id: number, i: number) {
-    this.todoSrv.updateTask({completed: true}, id);
-    this.todos.splice(i, 1)
+    setTimeout(() => {
+      this.todoSrv.updateTask({completed: true}, id);
+      this.todos.splice(i, 1)
+    }, 2000)
   }
 
 
