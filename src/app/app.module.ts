@@ -11,26 +11,23 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 const routes: Route[] = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: 'completedTasks',
-    component: CompletedTasksComponent
-  }
-
-]
+    component: CompletedTasksComponent,
+  },
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CompletedTasksComponent,
-    NavBarComponent
+    NavBarComponent,
   ],
-  imports: [
-    BrowserModule, RouterModule.forRoot(routes), FormsModule
-  ],
+  imports: [BrowserModule, RouterModule.forRoot(routes), FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

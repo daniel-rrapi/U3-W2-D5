@@ -9,12 +9,14 @@ import { TodoService } from 'src/app/service/todo.service';
 })
 export class CompletedTasksComponent implements OnInit {
   todos!: Todo[];
+  loaded: boolean = false
   task!: string;
 
   constructor(private todoSrv: TodoService) { }
 
   ngOnInit(): void {
     setTimeout(() => {
+      this.loaded = true
       const todos = this.todoSrv.recuperaTasks()
       this.todos = todos
     }, 2000);

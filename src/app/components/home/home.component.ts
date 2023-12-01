@@ -11,11 +11,13 @@ export class HomeComponent implements OnInit {
   todos!: Todo[];
   task!: string;
   index: number = 0;
+  loaded: boolean = false
 
   constructor(private todoSrv: TodoService ) {}
 
   ngOnInit(): void {
     setTimeout(() =>{
+      this.loaded = true
       const todos =  this.todoSrv.recuperaTasks();
       this.todos = todos
     }, 2000)
