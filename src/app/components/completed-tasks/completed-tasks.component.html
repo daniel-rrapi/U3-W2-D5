@@ -6,7 +6,7 @@
     </ng-container>
     <ng-container *ngIf="todos[0]">
       <ng-container *ngIf="todos.find(cerca) && !todos.find(cerca2)">
-        Ops, there are no completed tasks
+        Ops, there are no completed tasks!
       </ng-container>
     </ng-container>
     <div *ngFor="let task of todos; let i = index">
