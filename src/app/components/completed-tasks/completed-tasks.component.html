@@ -1,3 +1,5 @@
-<div *ngFor="let task of todos; let i = index">
-    <div *ngIf="task.completed">{{task.title}}</div>
-</div>
+<main>
+    <div *ngFor="let task of todos; let i = index">
+        <div *ngIf="task.completed">-{{task.title}}</div>
+    </div>
+</main>
