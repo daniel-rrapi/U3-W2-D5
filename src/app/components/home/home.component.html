@@ -1,0 +1,8 @@
+<div *ngFor="let task of todos; let i = index">
+    <div *ngIf="!task.completed">
+        <p>{{task.title}}</p>
+        <button type="button" (click)="taskDone(task.id, i)">Fatto</button>
+    </div>
+</div>
+<input type="text" [(ngModel)]="task">
+<button type="button" (click)="addNewTask(task)">Aggiungi</button>
